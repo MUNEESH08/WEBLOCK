@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://projectmark8904:N8BthaonV2Qj3AXo@cluster0.n7wvp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  }
+}
