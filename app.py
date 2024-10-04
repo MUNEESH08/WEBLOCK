@@ -4,6 +4,8 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 mongo_uri = os.getenv('MONGO_URI')
+
+# Establish the MongoDB client connection only once
 client = pymongo.MongoClient(mongo_uri)
 db = client['locationsDB']
 locations_collection = db['locations']
